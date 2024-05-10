@@ -1,5 +1,8 @@
 # Rust Latam: procedural macros workshop
 
+> [!NOTE]
+> This is my (BionicMushroom's) fork of [Rust Latam: procedural macros workshop](https://github.com/dtolnay/proc-macro-workshop). It contains my solutions to the provided projects. Before you look at the solutions, have a go at completing the projects by yourself!
+
 *This repo contains a selection of projects designed to learn to write Rust
 procedural macros &mdash; Rust code that generates Rust code.*
 
