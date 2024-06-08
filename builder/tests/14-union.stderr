@@ -1,0 +1,5 @@
+error: expected struct, found `union`
+ --> tests/14-union.rs:4:1
+  |
+4 | union Union {
+  | ^^^^^

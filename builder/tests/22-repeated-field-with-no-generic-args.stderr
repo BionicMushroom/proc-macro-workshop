@@ -1,0 +1,5 @@
+error: expected standard Vec
+ --> tests/22-repeated-field-with-no-generic-args.rs:8:12
+  |
+8 |     field: Vec,
+  |            ^^^

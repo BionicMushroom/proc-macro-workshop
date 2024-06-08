@@ -1,0 +1,5 @@
+error: expected struct, found `enum`
+ --> tests/13-enum.rs:4:1
+  |
+4 | enum Enum {
+  | ^^^^

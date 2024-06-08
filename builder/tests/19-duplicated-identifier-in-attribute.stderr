@@ -1,0 +1,5 @@
+error: identifier `add_field` is duplicated
+ --> tests/19-duplicated-identifier-in-attribute.rs:8:22
+  |
+8 |     #[builder(each = "add_field")]
+  |                      ^^^^^^^^^^^

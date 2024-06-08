@@ -1,0 +1,5 @@
+error: expected struct with named fields, found tuple-struct
+ --> tests/12-tuple-struct.rs:4:12
+  |
+4 | struct Test(i32, u32, String, Option<String>, Vec<String>);
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

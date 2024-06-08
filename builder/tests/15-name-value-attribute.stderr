@@ -1,0 +1,5 @@
+error: expected `builder(each = "...")`
+ --> tests/15-name-value-attribute.rs:5:7
+  |
+5 |     #[builder = "whatever"]
+  |       ^^^^^^^^^^^^^^^^^^^^
