@@ -1,0 +1,5 @@
+error: multiple `builder` attributes on the same field
+ --> tests/18-multiple-incorrect-attributes.rs:6:5
+  |
+6 |     #[builder = "second"]
+  |     ^^^^^^^^^^^^^^^^^^^^^

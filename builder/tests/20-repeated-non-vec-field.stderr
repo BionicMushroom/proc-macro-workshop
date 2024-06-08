@@ -1,0 +1,5 @@
+error: expected standard Vec
+ --> tests/20-repeated-non-vec-field.rs:6:12
+  |
+6 |     field: std::result::Result<u32, u32>,
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

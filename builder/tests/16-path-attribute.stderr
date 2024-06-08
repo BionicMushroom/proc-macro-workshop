@@ -1,0 +1,5 @@
+error: expected `builder(each = "...")`
+ --> tests/16-path-attribute.rs:5:7
+  |
+5 |     #[builder]
+  |       ^^^^^^^

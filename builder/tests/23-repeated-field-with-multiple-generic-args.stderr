@@ -1,0 +1,5 @@
+error: expected standard Vec
+  --> tests/23-repeated-field-with-multiple-generic-args.rs:11:12
+   |
+11 |     field: Vec<u32, u32>,
+   |            ^^^^^^^^^^^^^
