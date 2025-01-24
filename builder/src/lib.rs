@@ -455,7 +455,7 @@ impl FieldToFieldData<'_> {
                 .repeated_builder_method_raw_idents
                 .insert(ident.to_string())
             {
-                let ty = get_concrete_ty_from_vec_ty(&field.ty)
+                let ty = get_generic_ty_from_vec_ty(&field.ty)
                     .ok_or(Error::new_spanned(&field.ty, "expected standard Vec"))?;
 
                 Ok((ty, TypeKind::Repeated { ident }))
@@ -465,7 +465,7 @@ impl FieldToFieldData<'_> {
                     format!("identifier `{ident}` is duplicated"),
                 ))
             }
-        } else if let Some(ty) = get_concrete_ty_from_option_ty(&field.ty) {
+        } else if let Some(ty) = get_generic_ty_from_option_ty(&field.ty) {
             Ok((ty, TypeKind::Optional))
         } else {
             Ok((&field.ty, TypeKind::Regular))
@@ -515,15 +515,15 @@ fn is_builder_attribute(path: &Path) -> bool {
     path.is_ident("builder")
 }
 
-fn get_concrete_ty_from_option_ty(ty: &Type) -> Option<&Type> {
-    get_concrete_ty(&["std", "option", "Option"], ty)
+fn get_generic_ty_from_option_ty(ty: &Type) -> Option<&Type> {
+    get_generic_ty(&["std", "option", "Option"], ty)
 }
 
-fn get_concrete_ty_from_vec_ty(ty: &Type) -> Option<&Type> {
-    get_concrete_ty(&["std", "vec", "Vec"], ty)
+fn get_generic_ty_from_vec_ty(ty: &Type) -> Option<&Type> {
+    get_generic_ty(&["std", "vec", "Vec"], ty)
 }
 
-fn get_concrete_ty<'a>(raw_path: &[&str], ty: &'a Type) -> Option<&'a Type> {
+fn get_generic_ty<'a>(raw_path: &[&str], ty: &'a Type) -> Option<&'a Type> {
     Some(ty)
         .and_then(|ty| {
             if let Type::Path(path) = ty {
