@@ -1,0 +1,89 @@
+error: expected `debug(bound = "...")` bound attribute
+ --> tests/15-invalid-attributes-on-enum.rs:4:3
+  |
+4 | #[debug]
+  |   ^^^^^
+
+error: `debug = "..."` format attribute is allowed only on struct and enum fields
+ --> tests/15-invalid-attributes-on-enum.rs:8:1
+  |
+8 | #[debug = "0b{:08b}"]
+  | ^^^^^^^^^^^^^^^^^^^^^
+
+error: expected `debug(bound = "...")` bound attribute
+  --> tests/15-invalid-attributes-on-enum.rs:12:3
+   |
+12 | #[debug(bnd = "T: ::core::fmt::Debug")]
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error: multiple `debug(bound = "...")` bound attributes on the same enum
+  --> tests/15-invalid-attributes-on-enum.rs:19:1
+   |
+19 | #[debug(bound = "T: ::core::fmt::Debug")]
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error: multiple `debug = "..."` format attributes on the same enum field
+  --> tests/15-invalid-attributes-on-enum.rs:28:9
+   |
+28 |         #[debug = "0b{:08b}"]
+   |         ^^^^^^^^^^^^^^^^^^^^^
+
+error: multiple `debug(bound = "...")` bound attributes on the same enum field
+  --> tests/15-invalid-attributes-on-enum.rs:37:9
+   |
+37 |         #[debug(bound = "T: ::core::fmt::Debug")]
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error: multiple `debug(bound = "...")` bound attributes on the same enum field
+  --> tests/15-invalid-attributes-on-enum.rs:47:9
+   |
+47 |         #[debug(bound = "T: ::core::fmt::Debug")]
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error: `debug(bound = "...")` bound attribute is not allowed on enum fields if already specified on the enum itself
+  --> tests/15-invalid-attributes-on-enum.rs:55:14
+   |
+55 |     Variant0(#[debug(bound = "T: ::core::fmt::Debug")] T),
+   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error: `debug(bound = "...")` bound attribute was already specified on this enum field type
+  --> tests/15-invalid-attributes-on-enum.rs:61:14
+   |
+61 |     Variant1(#[debug(bound = "T: ::core::fmt::Debug")] T),
+   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error: `debug(bound = "...")` bound attribute was already specified on this enum field type
+  --> tests/15-invalid-attributes-on-enum.rs:68:9
+   |
+68 |         #[debug(bound = "T: ::core::fmt::Debug")] T,
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error: expected either `debug = "..."` format attribute or `debug(bound = "...")` bound attribute
+  --> tests/15-invalid-attributes-on-enum.rs:74:16
+   |
+74 |     Variant0(#[debug] T),
+   |                ^^^^^
+
+error: expected `debug = "..."` format attribute
+  --> tests/15-invalid-attributes-on-enum.rs:80:16
+   |
+80 |     Variant0(#[debug] T),
+   |                ^^^^^
+
+error: `debug(bound = "...")` bound attribute is not allowed on enum variants
+  --> tests/15-invalid-attributes-on-enum.rs:85:5
+   |
+85 |     #[debug(bound = "T: ::core::fmt::Debug")]
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error: `debug = "..."` format attribute is allowed only on struct and enum fields
+  --> tests/15-invalid-attributes-on-enum.rs:91:5
+   |
+91 |     #[debug = "0b{:08b}"]
+   |     ^^^^^^^^^^^^^^^^^^^^^
+
+error: `debug = "..."` format attribute and `debug(bound = "...")` bound attribute are not allowed here
+  --> tests/15-invalid-attributes-on-enum.rs:97:7
+   |
+97 |     #[debug]
+   |       ^^^^^

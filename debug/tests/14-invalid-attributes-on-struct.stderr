@@ -1,0 +1,65 @@
+error: expected `debug(bound = "...")` bound attribute
+ --> tests/14-invalid-attributes-on-struct.rs:4:3
+  |
+4 | #[debug]
+  |   ^^^^^
+
+error: `debug = "..."` format attribute is allowed only on struct and enum fields
+ --> tests/14-invalid-attributes-on-struct.rs:8:1
+  |
+8 | #[debug = "0b{:08b}"]
+  | ^^^^^^^^^^^^^^^^^^^^^
+
+error: expected `debug(bound = "...")` bound attribute
+  --> tests/14-invalid-attributes-on-struct.rs:12:3
+   |
+12 | #[debug(bnd = "T: ::core::fmt::Debug")]
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error: multiple `debug(bound = "...")` bound attributes on the same struct
+  --> tests/14-invalid-attributes-on-struct.rs:19:1
+   |
+19 | #[debug(bound = "T: ::core::fmt::Debug")]
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error: multiple `debug = "..."` format attributes on the same struct field
+  --> tests/14-invalid-attributes-on-struct.rs:27:5
+   |
+27 |     #[debug = "0b{:08b}"]
+   |     ^^^^^^^^^^^^^^^^^^^^^
+
+error: multiple `debug(bound = "...")` bound attributes on the same struct field
+  --> tests/14-invalid-attributes-on-struct.rs:34:5
+   |
+34 |     #[debug(bound = "T: ::core::fmt::Debug")]
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error: multiple `debug(bound = "...")` bound attributes on the same struct field
+  --> tests/14-invalid-attributes-on-struct.rs:42:5
+   |
+42 |     #[debug(bound = "T: ::core::fmt::Debug")]
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error: `debug(bound = "...")` bound attribute is not allowed on struct fields if already specified on the struct itself
+  --> tests/14-invalid-attributes-on-struct.rs:49:5
+   |
+49 |     #[debug(bound = "T: ::core::fmt::Debug")]
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error: `debug(bound = "...")` bound attribute was already specified on this struct field type
+  --> tests/14-invalid-attributes-on-struct.rs:58:5
+   |
+58 |     #[debug(bound = "T: ::core::fmt::Debug")]
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error: expected either `debug = "..."` format attribute or `debug(bound = "...")` bound attribute
+  --> tests/14-invalid-attributes-on-struct.rs:64:7
+   |
+64 |     #[debug]
+   |       ^^^^^
+
+error: expected `debug = "..."` format attribute
+  --> tests/14-invalid-attributes-on-struct.rs:71:7
+   |
+71 |     #[debug]
+   |       ^^^^^

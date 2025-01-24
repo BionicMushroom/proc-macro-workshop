@@ -1,0 +1,5 @@
+error: expected struct or enum, found `union`
+ --> tests/13-union.rs:4:1
+  |
+4 | union Test {
+  | ^^^^^
