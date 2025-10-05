@@ -1,0 +1,5 @@
+error: qualified paths are unsupported by #[sorted]
+  --> tests/26-pattern-path-with-qself.rs:17:9
+   |
+17 |         <TestStruct as TestTrait>::VALUE => println!("first"),
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -1,0 +1,5 @@
+error: `ref [mut]` patterns that bind variables without `@ <subpattern>` are unsupported by #[sorted]
+ --> tests/13-pattern-ident-without-subpattern.rs:8:9
+  |
+8 |         ref num => println!("{num}"),
+  |         ^^^^^^^

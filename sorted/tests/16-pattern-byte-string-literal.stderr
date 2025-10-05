@@ -1,0 +1,5 @@
+error: `b"abc def"` should sort before `b"def abc"`
+ --> tests/16-pattern-byte-string-literal.rs:8:9
+  |
+8 |         b"abc def" => println!("abc def"),
+  |         ^^^^^^^^^^

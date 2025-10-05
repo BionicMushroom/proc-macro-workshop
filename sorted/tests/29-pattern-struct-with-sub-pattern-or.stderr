@@ -1,0 +1,5 @@
+error: `(1 | 2)` should sort before `(5 | 6)`
+  --> tests/29-pattern-struct-with-sub-pattern-or.rs:16:34
+   |
+16 |                 value: (5 | 6) | (1 | 2),
+   |                                  ^^^^^^^

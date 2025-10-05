@@ -1,0 +1,5 @@
+error: 'a' should sort before 'd'
+ --> tests/18-pattern-char-literal.rs:8:9
+  |
+8 |         'a' => println!("a"),
+  |         ^^^

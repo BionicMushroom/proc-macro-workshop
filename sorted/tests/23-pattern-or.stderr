@@ -1,0 +1,5 @@
+error: `1 | 6` should sort before 5
+ --> tests/23-pattern-or.rs:8:9
+  |
+8 |         1 | 6 => println!("1 or 6"),
+  |         ^^^^^

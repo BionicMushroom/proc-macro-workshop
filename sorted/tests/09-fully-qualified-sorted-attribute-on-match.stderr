@@ -1,0 +1,5 @@
+error: Fmt(e) should sort before Io(e)
+  --> tests/09-fully-qualified-sorted-attribute-on-match.rs:20:13
+   |
+20 |             Fmt(e) => write!(f, "{}", e),
+   |             ^^^^^^

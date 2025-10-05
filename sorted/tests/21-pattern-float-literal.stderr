@@ -1,0 +1,5 @@
+error: 0.1 should sort before 0.5
+ --> tests/21-pattern-float-literal.rs:8:9
+  |
+8 |         0.1 => println!("0.1"),
+  |         ^^^

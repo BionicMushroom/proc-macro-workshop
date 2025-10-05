@@ -1,0 +1,5 @@
+error: `(1 | 2)` should sort before `(5 | 6)`
+  --> tests/31-pattern-tuple-struct-with-sub-pattern-or.rs:13:34
+   |
+13 |             TestStruct((5 | 6) | (1 | 2)) => write!(f, "1, 2, 5 or 6"),
+   |                                  ^^^^^^^

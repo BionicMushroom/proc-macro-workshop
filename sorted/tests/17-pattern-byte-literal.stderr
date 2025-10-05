@@ -1,0 +1,5 @@
+error: b'a' should sort before b'd'
+ --> tests/17-pattern-byte-literal.rs:8:9
+  |
+8 |         b'a' => println!("a"),
+  |         ^^^^

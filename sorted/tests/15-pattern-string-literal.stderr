@@ -1,0 +1,5 @@
+error: `"abc def"` should sort before "def"
+ --> tests/15-pattern-string-literal.rs:8:9
+  |
+8 |         "abc def" => println!("abc def"),
+  |         ^^^^^^^^^
