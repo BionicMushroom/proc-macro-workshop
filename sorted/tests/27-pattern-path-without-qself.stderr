@@ -1,0 +1,5 @@
+error: Test::A should sort before Test::B
+  --> tests/27-pattern-path-without-qself.rs:17:9
+   |
+17 |         Test::A => println!("A"),
+   |         ^^^^^^^

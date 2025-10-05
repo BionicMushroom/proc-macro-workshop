@@ -13,7 +13,7 @@ use syn::{
 
 /// A derive macro that implements the [`std::fmt::Debug`](https://doc.rust-lang.org/std/fmt/trait.Debug.html)
 /// trait which is more customizable than the similar `derive(Debug)` macro from the standard library.
-/// 
+///
 /// With it, you can specify:
 /// - the formatting used for individual struct fields by providing a format string in the style expected by
 ///   Rust string formatting macros like [`format!`](https://doc.rust-lang.org/std/macro.format.html)

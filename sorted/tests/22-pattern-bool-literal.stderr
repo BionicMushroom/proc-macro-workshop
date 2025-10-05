@@ -1,0 +1,5 @@
+error: false should sort before true
+ --> tests/22-pattern-bool-literal.rs:9:9
+  |
+9 |         false => println!("false"),
+  |         ^^^^^

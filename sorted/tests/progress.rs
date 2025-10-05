@@ -1,12 +1,37 @@
 #[test]
 fn tests() {
     let t = trybuild::TestCases::new();
-    //t.pass("tests/01-parse-enum.rs");
-    //t.compile_fail("tests/02-not-enum.rs");
-    //t.compile_fail("tests/03-out-of-order.rs");
-    //t.compile_fail("tests/04-variants-with-data.rs");
-    //t.compile_fail("tests/05-match-expr.rs");
-    //t.compile_fail("tests/06-pattern-path.rs");
-    //t.compile_fail("tests/07-unrecognized-pattern.rs");
-    //t.pass("tests/08-underscore.rs");
+    t.pass("tests/01-parse-enum.rs");
+    t.compile_fail("tests/02-not-enum.rs");
+    t.compile_fail("tests/03-out-of-order.rs");
+    t.compile_fail("tests/04-variants-with-data.rs");
+    t.compile_fail("tests/05-match-expr.rs");
+    t.compile_fail("tests/06-pattern-path.rs");
+    t.compile_fail("tests/07-unrecognized-pattern.rs");
+    t.pass("tests/08-underscore.rs");
+    t.compile_fail("tests/09-fully-qualified-sorted-attribute-on-match.rs");
+    t.pass("tests/10-ignores-match-without-sorted-attribute.rs");
+    t.compile_fail("tests/11-arm-with-guard.rs");
+    t.compile_fail("tests/12-pattern-ident-with-subpattern.rs");
+    t.compile_fail("tests/13-pattern-ident-without-subpattern.rs");
+    t.compile_fail("tests/14-pattern-ident-without-ref-and-subpattern.rs");
+    t.compile_fail("tests/15-pattern-string-literal.rs");
+    t.compile_fail("tests/16-pattern-byte-string-literal.rs");
+    t.compile_fail("tests/17-pattern-byte-literal.rs");
+    t.compile_fail("tests/18-pattern-char-literal.rs");
+    t.compile_fail("tests/19-pattern-signed-int-literal.rs");
+    t.compile_fail("tests/20-pattern-unsigned-int-literal.rs");
+    t.compile_fail("tests/21-pattern-float-literal.rs");
+    t.compile_fail("tests/22-pattern-bool-literal.rs");
+    t.compile_fail("tests/23-pattern-or.rs");
+    t.compile_fail("tests/24-sub-pattern-or.rs");
+    t.compile_fail("tests/25-parenthesized-sub-pattern-or.rs");
+    t.compile_fail("tests/26-pattern-path-with-qself.rs");
+    t.compile_fail("tests/27-pattern-path-without-qself.rs");
+    t.pass("tests/28-pattern-struct.rs");
+    t.compile_fail("tests/29-pattern-struct-with-sub-pattern-or.rs");
+    t.pass("tests/30-pattern-tuple-struct.rs");
+    t.compile_fail("tests/31-pattern-tuple-struct-with-sub-pattern-or.rs");
+    t.compile_fail("tests/32-mismatched-patterns.rs");
+    t.pass("tests/33-ignored-path-args.rs");
 }

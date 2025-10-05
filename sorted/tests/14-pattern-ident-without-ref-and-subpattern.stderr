@@ -1,0 +1,5 @@
+error: abc should sort before def
+ --> tests/14-pattern-ident-without-ref-and-subpattern.rs:9:9
+  |
+9 |         abc => println!("{abc}"),
+  |         ^^^

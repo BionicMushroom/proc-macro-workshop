@@ -1,0 +1,5 @@
+error: 6 should sort before 7
+ --> tests/24-sub-pattern-or.rs:8:17
+  |
+8 |         7 | 8 | 6 => println!("6, 7 or 8"),
+  |                 ^

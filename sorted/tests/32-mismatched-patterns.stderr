@@ -1,0 +1,5 @@
+error: comparison between this pattern and the previously encountered patterns is unsupported by #[sorted]
+ --> tests/32-mismatched-patterns.rs:9:9
+  |
+9 |         1 => println!("1"),
+  |         ^
