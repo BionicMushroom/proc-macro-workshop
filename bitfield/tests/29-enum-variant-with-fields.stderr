@@ -1,0 +1,5 @@
+error: expected variant with no fields
+  --> tests/29-enum-variant-with-fields.rs:10:5
+   |
+10 |     Variant3(u8),
+   |     ^^^^^^^^

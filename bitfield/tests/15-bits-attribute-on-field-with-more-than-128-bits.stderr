@@ -1,0 +1,5 @@
+error: expected no more than 128 bits
+ --> tests/15-bits-attribute-on-field-with-more-than-128-bits.rs:6:14
+  |
+6 |     #[bits = 129]
+  |              ^^^

@@ -1,0 +1,5 @@
+error[E0080]: evaluation panicked: expected struct size to be equal to the value of the `bits` attribute
+ --> tests/19-bits-attribute-on-struct-wrong.rs:6:8
+  |
+6 | struct Test {
+  |        ^^^^ evaluation of `size_of_struct_Test_is_equal_to_the_value_of_the_bits_attribute` failed here

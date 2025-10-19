@@ -1,0 +1,5 @@
+error: multiple `bits` attributes on the same field
+ --> tests/14-multiple-bits-attributes-on-same-struct-field.rs:7:5
+  |
+7 |     #[bits = 8]
+  |     ^^^^^^^^^^^
