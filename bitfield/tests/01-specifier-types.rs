@@ -63,5 +63,8 @@ pub struct MyFourBytes {
 }
 
 fn main() {
-    assert_eq!(<B24 as Specifier>::BITS, 24);
+    assert_eq!(
+        <B24 as Specifier>::BITS,
+        std::num::NonZero::new(24).expect("24 should not be 0")
+    );
 }

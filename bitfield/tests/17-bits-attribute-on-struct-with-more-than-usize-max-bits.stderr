@@ -1,0 +1,5 @@
+error: expected no more than 18446744073709551615 bits
+ --> tests/17-bits-attribute-on-struct-with-more-than-usize-max-bits.rs:5:10
+  |
+5 | #[bits = 18446744073709551616]
+  |          ^^^^^^^^^^^^^^^^^^^^

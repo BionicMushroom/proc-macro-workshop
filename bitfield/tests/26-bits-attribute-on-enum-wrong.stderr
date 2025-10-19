@@ -1,0 +1,5 @@
+error: expected enum size to be equal to the value of the `bits` attribute
+ --> tests/26-bits-attribute-on-enum-wrong.rs:6:6
+  |
+6 | enum Test {
+  |      ^^^^

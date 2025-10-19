@@ -211,7 +211,11 @@ pub fn sorted(
 
     match look_for_unsorted_enum_variants(item) {
         Ok(()) => original_input,
-        Err(e) => e.into_compile_error().into(),
+        Err(e) => {
+            let mut output = TokenStream::from(original_input);
+            output.extend(e.to_compile_error());
+            output.into()
+        }
     }
 }
 

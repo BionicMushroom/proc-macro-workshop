@@ -1,16 +1,33 @@
 #[test]
 fn tests() {
     let t = trybuild::TestCases::new();
-    //t.pass("tests/01-specifier-types.rs");
-    //t.pass("tests/02-storage.rs");
-    //t.pass("tests/03-accessors.rs");
-    //t.compile_fail("tests/04-multiple-of-8bits.rs");
-    //t.pass("tests/05-accessor-signatures.rs");
-    //t.pass("tests/06-enums.rs");
-    //t.pass("tests/07-optional-discriminant.rs");
-    //t.compile_fail("tests/08-non-power-of-two.rs");
-    //t.compile_fail("tests/09-variant-out-of-range.rs");
-    //t.pass("tests/10-bits-attribute.rs");
-    //t.compile_fail("tests/11-bits-attribute-wrong.rs");
-    //t.pass("tests/12-accessors-edge.rs");
+    t.pass("tests/01-specifier-types.rs");
+    t.pass("tests/02-storage.rs");
+    t.pass("tests/03-accessors.rs");
+    t.compile_fail("tests/04-multiple-of-8bits.rs");
+    t.pass("tests/05-accessor-signatures.rs");
+    t.pass("tests/06-enums.rs");
+    t.pass("tests/07-optional-discriminant.rs");
+    t.compile_fail("tests/08-non-power-of-two.rs");
+    t.compile_fail("tests/09-variant-out-of-range.rs");
+    t.pass("tests/10-bits-attribute.rs");
+    t.compile_fail("tests/11-bits-attribute-wrong.rs");
+    t.pass("tests/12-accessors-edge.rs");
+    t.pass("tests/13-raw-ident.rs");
+    t.compile_fail("tests/14-multiple-bits-attributes-on-same-struct-field.rs");
+    t.compile_fail("tests/15-bits-attribute-on-field-with-more-than-128-bits.rs");
+    t.compile_fail("tests/16-multiple-bits-attributes-on-same-struct.rs");
+    t.compile_fail("tests/17-bits-attribute-on-struct-with-more-than-usize-max-bits.rs");
+    t.pass("tests/18-bits-attribute-on-struct.rs");
+    t.compile_fail("tests/19-bits-attribute-on-struct-wrong.rs");
+    t.pass("tests/20-struct-with-unnamed-fields.rs");
+    t.compile_fail("tests/21-unit-struct.rs");
+    t.compile_fail("tests/22-multiple-bits-attributes-on-same-enum.rs");
+    t.compile_fail("tests/23-multiple-set-bits-attributes-on-same-enum.rs");
+    t.pass("tests/24-set-bits-attribute.rs");
+    t.pass("tests/25-bits-attribute-on-enum.rs");
+    t.compile_fail("tests/26-bits-attribute-on-enum-wrong.rs");
+    t.pass("tests/27-bits-and-set-bits-attributes-on-enum.rs");
+    t.compile_fail("tests/28-bits-and-set-bits-attributes-on-enum-wrong.rs");
+    t.compile_fail("tests/29-enum-variant-with-fields.rs");
 }

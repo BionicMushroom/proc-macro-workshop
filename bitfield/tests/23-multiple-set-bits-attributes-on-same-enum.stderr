@@ -1,0 +1,5 @@
+error: multiple `set_bits` attributes on the same enum
+ --> tests/23-multiple-set-bits-attributes-on-same-enum.rs:7:1
+  |
+7 | #[set_bits = 2]
+  | ^^^^^^^^^^^^^^^
